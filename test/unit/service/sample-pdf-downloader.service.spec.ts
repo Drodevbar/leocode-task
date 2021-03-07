@@ -44,7 +44,7 @@ describe('SamplePdfDownloaderService', () => {
       expect(result).toStrictEqual({ data });
     });
 
-    it('should throw SamplePdfFetchError when httpService thrown an exception', async () => {
+    it('should throw SamplePdfFetchError when httpService threw an exception', async () => {
       httpServiceMock.get.mockRejectedValue(new Error('Ooops!'));
 
       await expect(samplePdfDownloaderService.fetchSamplePdf()).rejects.toThrow(

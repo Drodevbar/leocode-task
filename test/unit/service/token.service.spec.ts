@@ -67,7 +67,7 @@ describe('TokenService', () => {
       });
     });
 
-    it('should return status EXPIRED when jwt.verify() thrown TokenExpiredError', () => {
+    it('should return status EXPIRED when jwt.verify() threw TokenExpiredError', () => {
       jwtMock.verify.mockImplementation(() => {
         throw new TokenExpiredError('Ooops!', new Date());
       });
@@ -79,7 +79,7 @@ describe('TokenService', () => {
       });
     });
 
-    it('should return status INVALID when jwt.verify() thrown error other than TokenExpiredError', () => {
+    it('should return status INVALID when jwt.verify() threw error other than TokenExpiredError', () => {
       jwtMock.verify.mockImplementation(() => {
         throw new JsonWebTokenError('Ooops!');
       });

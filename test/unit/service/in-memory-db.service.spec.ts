@@ -60,7 +60,7 @@ describe('InMemoryDbService', () => {
       );
     });
 
-    it('should return null when fileSystem.readFileSync thrown an exception', () => {
+    it('should return null when fileSystem.readFileSync threw an exception', () => {
       fileSystemMock.readFileSync.mockImplementation(() => {
         throw new Error('Ooops!');
       });
