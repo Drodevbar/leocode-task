@@ -1,10 +1,10 @@
 import {
   Body,
   Controller,
-  ForbiddenException,
   NotFoundException,
   Post,
   HttpCode,
+  UnauthorizedException,
 } from '@nestjs/common';
 import { SignInDto } from 'src/dto/sign-in.dto';
 import { AuthService } from 'src/service/auth.service';
@@ -34,7 +34,7 @@ export class LoginController {
     }
 
     if (!this.authService.passwordMatch(password, user)) {
-      throw new ForbiddenException('Email and password does not match');
+      throw new UnauthorizedException('Email and password does not match');
     }
 
     return {

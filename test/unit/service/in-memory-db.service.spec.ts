@@ -1,6 +1,5 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { InMemoryDbService } from '../../../src/service/in-memory-db.service';
-import * as fs from 'fs';
 import { UserModel } from '../../../src/model/user.model';
 
 describe('InMemoryDbService', () => {
