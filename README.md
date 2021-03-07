@@ -3,7 +3,7 @@
 
 ### Running application locally
 1. `cp .env.example .env`
-1. _fill all environmental variable_
+1. _fill all environmental variables_
 1. `npm install`
 1. `npm run start`
 1. _application is available on http://localhost:3000/_
