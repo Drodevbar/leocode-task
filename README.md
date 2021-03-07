@@ -12,7 +12,7 @@
 
 1. `npm run test`
 
-Note: this is standard Nest.js app that was created from Nest.js boilerplate, so other Nest-specific npm scripts are also available (like linting, formatting, prod build, etc.) - see `package.json`
+_Note: this is standard Nest.js app that was created from Nest.js boilerplate, so other Nest-specific npm scripts are also available (like linting, formatting, prod build, etc.) - see `package.json`_
 
 ### Buzzwords:
 1. Nest.js along with TS 
@@ -25,7 +25,7 @@ Development of this application (implementing all the requirements and writing s
 took me something around 6h. I was informed that the usual time to complete this task 
 is something around 4h, hence there are still some things to do that I would normally do, but because of time constrains I didn't.
 These things are:
-1. increase unit test coverage (right now only services are unit tested)
+1. increase code coverage (right now only services are unit tested)
 1. add e2e tests
 1. Dockerize application
 1. add CI/CI (running unit tests, e2e tests, linting)
@@ -37,7 +37,7 @@ These things are:
 
 _Note: For simplicity’s sake and because
 this project uses in-memory db, this application
-stores password in plain text (normally I would use hashing function and store the hashes)_
+stores passwords in plain text (normally I would use hashing function and store the hashes)_
 
 ### Api specification
 
@@ -84,6 +84,8 @@ Possible responses:
 #### 3. `POST /api/encrypt`
 
 Endpoint for encrypting sample PDF file with user's RSA public key
+
+Possible responses:
 
 | Status | Description                                                         | Body                               |
 |--------|---------------------------------------------------------------------|------------------------------------|
