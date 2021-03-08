@@ -58,7 +58,8 @@ Possible responses:
 
 | Status | Description                                                         | Body                               |
 |--------|---------------------------------------------------------------------|------------------------------------|
-| 201    | Password match. New JWT token returned | `authToken` - valid JWT        |
+| 201    | Credentials match. New JWT token returned | `authToken` - valid JWT        |
+| 400    | Validation errors | Object with all validation errors  |
 | 401    | Credentials don't match                                            | error containing all the details |
 | 404    | User with given email not found                                            | error containing all the details |
 
