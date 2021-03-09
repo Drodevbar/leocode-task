@@ -13,7 +13,7 @@ export class AuthMiddleware implements NestMiddleware {
   constructor(private tokenService: TokenService) {}
 
   use(req: RequestWithEmailModel, res: Response, next: NextFunction) {
-    const token = req.headers.authorization;
+    const token = req.headers.authorization ?? '';
 
     if (!token.startsWith('Bearer ')) {
       throw new UnauthorizedException('Invalid token provided');
